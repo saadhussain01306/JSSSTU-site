@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="image/icono1.png" type="image/svg+xml">
+    <title>Examinations@JSSSTU</title>
+    <style>
+        /* Cascading Style Sheets */
+
+        *{
+            margin: 0;
+            padding: 0;
+            /* border: 1px solid yellow; */
+        }
+
+        @font-face {
+            font-family: myFirstFont;
+            src: url(../Poppins/Poppins-Regular.ttf);
+        }
+        @font-face {
+            font-family: bold;
+            src: url(../Poppins/Poppins-Bold.ttf);
+        }
+
+        @font-face {
+            font-family: secound;
+            src: url(../Poppins/Poppins-Bold.ttf);
+        }
+
+        h1{
+            font-family: bold;
+        }
+
+        body{
+            font-family: myFirstFont, Verdana, Geneva, Tahoma, sans-serif;
+            cursor: default;
+        }
+
+        /* Website Scrollerbar */
+        body::-webkit-scrollbar {
+            width: 5px !important;
+            height: 5px !important;
+        }
+        body::-webkit-scrollbar-track {
+            background: #3838387c !important;
+        }
+        body::-webkit-scrollbar-thumb {
+            background-color: #e0120ba4 !important;
+            border: 1px solid #ff020279 !important;
+            border-radius: 1px !important;
+        }
+
+        .header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.6), rgba(4,9,30,0.6)), url(/image/background1.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: transparent; /* Hide text initially */
+    padding-top: 50px;
+    overflow: hidden; /* Hide overflow to prevent content flickering */
+}
+
+.header-content {
+    text-align: center;
+    animation: fadeIn 2s ease-out forwards; /* Apply fade in animation to header content */
+}
+
+.college-logo {
+    width: 80%; /* Adjust as needed */
+    height: 80%;
+    opacity: 0; /* Initially hide the logo */
+    animation: slideIn 2s ease-out forwards; /* Apply slide in animation to logo */
+}
+
+@keyframes fadeIn {
+    from { color: transparent; }
+    to { color: white; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-100%); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* New content styling */
+.exam-section {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.exam-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #0055a4;
+}
+
+.exam-section p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* Table styling */
+.exam-table {
+    margin: 50px auto;
+    width: 90%;
+    border-collapse: collapse;
+    border: 2px solid #0055a4;
+}
+
+.exam-table th, .exam-table td {
+    padding: 10px;
+    border: 1px solid #0055a4;
+}
+
+.exam-table th {
+    background-color: #0055a4;
+    color: white;
+}
+
+.exam-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.exam-table tr:hover {
+    background-color: #ddd;
+}
+
+.exam-table td {
+    transition: background-color 0.5s;
+}
+
+.exam-table td:hover {
+    background-color: #b3d9ff;
+}
+
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <a href="index.html" style="position: absolute; top: 20px; right: 20px; text-decoration: none; color: white; font-size: 20px; border-bottom: 2px solid transparent;">Home</a>
+        <div class="header-content">
+            <img class="college-logo" src="image/jslogo.png" alt="College Logo">
+            <h1 style="font-size: 50px;">JSS Science and Technology University</h1>
+        </div>
+    </header>
+
+    <!-- New content: About Examinations -->
+    <section class="exam-section">
+        <h2>About Examinations</h2>
+        <p>An examination is a measure to assess a student’s performance with a view to check whether the student has acquired a certain level of proficiency in terms of predefined parameters.</p>
+        <p>The parameters selected should be intended to assess the level of knowledge acquired, skills, aptitude, and attitude of the student through various academic activities. It is one of the duties of the University to hold examinations and confer degrees on persons who fulfill the requisite qualifications/conditions.</p>
+        <p>The Examinations Department mainly deals with the notification of the schedule of examinations, the conduction of examinations, getting the performance of the candidates at the examinations properly assessed, and timely declaration of results and awarding of degrees, for the purpose of simplification, smooth and easier functioning the work of Examination.</p>
+        <p>After Sri Jayachamrajendra College of Engineering was granted autonomy in 2007, the exam section, which was also known as the "Autonomous office," was introduced. Further, it was renamed "Examinations Office" following the establishment of the JSS Science and Technology University in 2016.</p>
+    </section>
+
+    <!-- New content: Academic Regulations Table -->
+    <table class="exam-table">
+        <caption  style="font-size: 50px;">Outline of Academic Regulations for UG & PG</caption>
+        <thead>
+            <tr>
+                <th>Important regulations/ Admission Year</th>
+                <th>2016</th>
+                <th>2017</th>
+                <th>2018</th>
+                <th>2019</th>
+                <th>2020</th>
+                <th>2021</th>
+                <th>2022</th>
+                <th>2023</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>SEE/CIE</td>
+                <td>50/50</td>
+                <td>50/50</td>
+                <td>50/50</td>
+                <td>50/50</td>
+                <td>50/50</td>
+                <td>50/50</td>
+                <td>60/40</td>
+                <td>60/40</td>
+            </tr>
+            <tr>
+                <td>Vertical Progression</td>
+                <td>Any Four courses limit</td>
+                <td>Any Four courses limit</td>
+                <td>Any Four courses limit</td>
+                <td>Any Four courses limit</td>
+                <td>Any Four courses limit</td>
+                <td>20 Credits limit</td>
+                <td>20 Credits limit</td>
+                <td>20 Credits limit</td>
+            </tr>
+            <tr>
+                <td>Parallel registration</td>
+                <td>Maximum 4 subjects</td>
+                <td>Maximum 4 subjects</td>
+                <td>Maximum 3 subjects</td>
+                <td>Maximum 3 subjects</td>
+                <td>Maximum 3 subjects</td>
+                <td>Maximum 3 subjects including CIE improvement</td>
+                <td>Maximum 3 subjects including CIE improvement</td>
+                <td>Maximum 3 subjects including CIE improvement</td>
+            </tr>
+            <tr>
+                <td>Supplementary</td>
+                <td>Maximum 4 subjects</td>
+                <td>Maximum 4 subjects</td>
+                <td>Maximum 4 subjects</td>
+                <td>Any number of subjects</td>
+                <td>Any number of subjects</td>
+                <td>No</td>
+                <td>No</td>
+                <td>No</td>
+            </tr>
+            <tr>
+                <td>Makeup Exam</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>No</td>
+                <td>No</td>
+                <td>No</td>
+            </tr>
+            <tr>
+                <td>Repeaters Exam</td>
+                <td>No</td>
+                <td>No</td>
+                <td>No</td>
+                <td>No</td>
+                <td>No</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td>Practical Exam</td>
+                <td>No</td>
+                <td>No</td>
+                <td>No</td>
+                <td>No</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td>Events</td>
+                <td>5</td>
+                <td>5</td>
+                <td>5</td>
+                <td>5</td>
+                <td>5</td>
+                <td>5</td>
+                <td>3</td>
+                <td>3</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

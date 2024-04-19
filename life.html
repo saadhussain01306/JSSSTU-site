@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="image/icono1.png" type="image/svg+xml">
+    <title>Life@JSSSTU</title>
+    <style>
+        /* Cascading Style Sheets */
+
+        *{
+            margin: 0;
+            padding: 0;
+            /* border: 1px solid yellow; */
+        }
+
+        @font-face {
+            font-family: myFirstFont;
+            src: url(../Poppins/Poppins-Regular.ttf);
+        }
+        @font-face {
+            font-family: bold;
+            src: url(../Poppins/Poppins-Bold.ttf);
+        }
+
+        @font-face {
+            font-family: secound;
+            src: url(../Poppins/Poppins-Bold.ttf);
+        }
+
+        h1{
+            font-family: bold;
+        }
+
+        body{
+            font-family: myFirstFont, Verdana, Geneva, Tahoma, sans-serif;
+            cursor: default;
+        }
+
+        /* Website Scrollerbar */
+        body::-webkit-scrollbar {
+            width: 5px !important;
+            height: 5px !important;
+        }
+        body::-webkit-scrollbar-track {
+            background: #3838387c !important;
+        }
+        body::-webkit-scrollbar-thumb {
+            background-color: #e0120ba4 !important;
+            border: 1px solid #ff020279 !important;
+            border-radius: 1px !important;
+        }
+
+        .header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.6), rgba(4,9,30,0.6)), url(/image/background1.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: transparent; /* Hide text initially */
+    padding-top: 50px;
+    overflow: hidden; /* Hide overflow to prevent content flickering */
+}
+
+.header-content {
+    text-align: center;
+    animation: fadeIn 2s ease-out forwards; /* Apply fade in animation to header content */
+}
+
+.college-logo {
+    width: 80%; /* Adjust as needed */
+    height: 80%;
+    opacity: 0; /* Initially hide the logo */
+    animation: slideIn 2s ease-out forwards; /* Apply slide in animation to logo */
+}
+
+@keyframes fadeIn {
+    from { color: transparent; }
+    to { color: white; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-100%); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+
+        .academic-images {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .academic-images img {
+            max-width: 100px;
+            margin: 0 10px;
+        }
+
+        /* Course */
+        .course{
+            width: 100%;
+            margin: auto;
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        h1{
+            font-size: 36px;
+            font-weight: 300;
+        }
+
+        p{
+            color: #777;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 22px;
+            padding: 10px;
+        }
+
+        .row{
+            margin-top: 5%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .course-col{
+            flex-basis: calc(33.33% - 20px);
+            background: #fff3f3;
+            border-radius: 10px;
+            margin-bottom: 5%;
+            margin-right: 20px;
+            padding: 20px 12px;
+            box-sizing: border-box;
+            transition: 0.5s;
+            position: relative;
+            animation: splitTransition 1s ease-in-out forwards;
+        }
+
+        .course-col img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        h3{
+            text-align: center;
+            font-weight: 600;
+            margin: 10px 0px;
+        }
+
+        .course-col:hover{
+            box-shadow: 10px 10px 24px 0px rgba(0,0,0,0.4);
+        }
+
+        .course-col:nth-child(3n) {
+            margin-right: 0; /* Remove margin for every third column to prevent overflow */
+        }
+
+        @keyframes splitTransition {
+            0% { transform: translateY(-50%); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        /* Video Section */
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            overflow: hidden;
+            margin-top: 50px;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 80%;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <a href="index.html" style="position: absolute; top: 20px; right: 20px; text-decoration: none; color: white; font-size: 20px; border-bottom: 2px solid transparent;">Home</a>
+        <div class="header-content">
+            <img class="college-logo" src="image/jslogo.png" alt="College Logo">
+            <h1 style="font-size: 50px;">JSS Science and Technology University</h1>
+        </div>
+    </header>
+
+
+<section class="course" id="course_call">
+    <h1 style="font-size: 70px;">Campus Facilities</h1>
+    <p style="font-size: 20px;">Campus offers a well-equipped infrastructure with cutting-edge resources to help students and teachers in their academic and research activities.</p>
+
+    <div class="row">
+        <div class="course-col">
+            <img src="/image/class-room.jpg" alt="class-room">
+            <h2>Classrooms</h2>
+            <p>ICT-enabled classrooms makes the learning and teaching process interesting, creative and more inclusive.</p>
+        </div>
+
+        <div class="course-col">
+            <img src="/image/lab.jpg" alt="lab">
+            <h2>Laboratories</h2>
+            <p>The college has separate laboratories for basic science, All the laboratories are adequately equipped as per the University norms.</p>
+        </div>
+
+        <div class="course-col">
+            <img src="/image/lib.jpg" alt="Central Library">
+            <h2>Central Library</h2>
+            <p>The College Library is the hub of learning with a rich collection of books, e-books, standard reference sources and other audio-visual material.</p>
+        </div>
+
+        <div class="course-col">
+            <img src="/image/aud.jpg" alt="Auditorium">
+            <h2>Auditorium</h2>
+            <p>The institution features three auditoriums, each with the required audio-visual equipment.</p>
+        </div>
+
+        <div class="course-col">
+            <img src="/image/fit.jpg" alt="Athletics & Fitness">
+            <h2>Athletics & Fitness</h2>
+            <p>Physical education-is an integral part of the educational programme designed to promote the optimum development of an individual.</p>
+        </div>
+
+        <div class="course-col">
+            <img src="/image/host.jpg" alt="Hostel Facilities">
+            <h2>Hostel Facilities</h2>
+            <p>Separate hostel facilities are provided for Boys and Girls in the college campus. It has adequate high security and good discipline.</p>
+        </div>
+
+        <div class="course-col">
+            <img src="/image/cric.jpg" alt="Cricket Stadium">
+            <h2>Cricket Stadium</h2>
+            <p>With a lush green outfield and a well-maintained pitch, the ground provides an excellent setting for both local and regional cricket matches.</p>
+        </div>
+
+        <div class="course-col">
+            <img src="/image/bank.jpg" alt="Bank & ATM">
+            <h2>Bank & ATM</h2>
+            <p>Having a bank and ATM inside a university campus can be highly convenient for students, faculty, and staff.</p>
+        </div>
+
+        <div class="course-col">
+            <img src="/image/lib.jpg" alt="Digital Library">
+            <h2>Digital Library</h2>
+            <p>The digital hub of the library has access to a large number of e-books, e-journals, and online databases along with access to various e-resources across the library.</p>
+        </div>
+
+        <!-- Add more course-col elements as needed -->
+
+    </div>
+</section>
+
+<h1 style="font-weight: bold; color: black; font-size: 40px; text-align: center;">Explore Our Green Campus</h1>
+
+<!-- Video Section -->
+<div class="video-container">
+    <iframe width="560" height="315" src="video/video.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="image/icono1.png" type="image/svg+xml">
+    <title>STEP @JSSSTU</title>
+    <style>
+         /* Cascading Style Sheets */
+
+         *{
+            margin: 0;
+            padding: 0;
+            /* border: 1px solid yellow; */
+        }
+
+        @font-face {
+            font-family: myFirstFont;
+            src: url(../Poppins/Poppins-Regular.ttf);
+        }
+        @font-face {
+            font-family: bold;
+            src: url(../Poppins/Poppins-Bold.ttf);
+        }
+
+        @font-face {
+            font-family: secound;
+            src: url(../Poppins/Poppins-Bold.ttf);
+        }
+
+        h1{
+            font-family: bold;
+        }
+
+        body{
+            font-family: myFirstFont, Verdana, Geneva, Tahoma, sans-serif;
+            cursor: default;
+        }
+
+        /* Website Scrollerbar */
+        body::-webkit-scrollbar {
+            width: 5px !important;
+            height: 5px !important;
+        }
+        body::-webkit-scrollbar-track {
+            background: #3838387c !important;
+        }
+        body::-webkit-scrollbar-thumb {
+            background-color: #e0120ba4 !important;
+            border: 1px solid #ff020279 !important;
+            border-radius: 1px !important;
+        }
+
+        .header {
+            min-height: 100vh;
+            width: 100%;
+            background-image: linear-gradient(rgba(4,9,30,0.6), rgba(4,9,30,0.6)), url(/image/background1.png);
+            background-position: center;
+            background-size: cover;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: transparent; /* Hide text initially */
+            padding-top: 50px;
+            overflow: hidden; /* Hide overflow to prevent content flickering */
+        }
+
+        .header-content {
+            text-align: center;
+            animation: fadeIn 2s ease-out forwards; /* Apply fade in animation to header content */
+        }
+
+        .college-logo {
+            width: 80%; /* Adjust as needed */
+            height: 80%;
+            opacity: 0; /* Initially hide the logo */
+            animation: slideIn 2s ease-out forwards; /* Apply slide in animation to logo */
+        }
+
+        @keyframes fadeIn {
+            from { color: transparent; }
+            to { color: white; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-100%); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        /*about section*/
+        .about-content {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .heading {
+            font-size: 28px;
+            font-weight: 500;
+            margin-bottom: 30px;
+            color: #0055a4;
+        }
+
+        .subhead {
+            font-size: 28px;
+            color: red;
+            font-weight: 500;
+        }
+
+        .about-content > div {
+            width: 50%;
+            padding: 0 20px;
+        }
+
+        .about-content h4 {
+            font-size: 18px;
+            color: red;
+            font-weight: 500;
+        }
+
+        .about-content p {
+            font-size: 16px;
+            margin-bottom: 20px;
+            line-height: 23px;
+        }
+
+        .about-image {
+            width: 45%;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .about-content:hover .about-image {
+            transform: scale(1.1);
+        }
+
+       /* Course */
+       .course{
+            width: 100%;
+            margin: auto;
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        h1{
+            font-size: 36px;
+            font-weight: 300;
+        }
+
+        p{
+            color: #777;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 22px;
+            padding: 10px;
+        }
+
+        .row{
+            margin-top: 5%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .course-col{
+            flex-basis: calc(25% - 20px);
+            background: #fff3f3;
+            border-radius: 10px;
+            margin-bottom: 5%;
+            margin-right: 20px;
+            padding: 20px 12px;
+            box-sizing: border-box;
+            transition: 0.5s;
+            position: relative;
+            animation: splitTransition 1s ease-in-out forwards;
+        }
+
+        .course-col img {
+            width: 50%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        h3{
+            text-align: center;
+            font-weight: 600;
+            margin: 10px 0px;
+        }
+
+        .course-col:hover{
+            box-shadow: 10px 10px 24px 0px rgba(0,0,0,0.4);
+        }
+
+        .course-col:nth-child(4n) {
+            margin-right: 0; /* Remove margin for every fourth column */
+        }
+
+        @keyframes splitTransition {
+            0% { transform: translateY(-50%); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+       /* Timeline Section */
+.timeline {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.timeline-heading {
+    font-size: 40px;
+    margin-bottom: 30px;
+    color: #0055a4;
+}
+
+.timeline-images {
+    display: flex;
+    flex-direction: column; /* Change to column to stack images vertically */
+    align-items: center; /* Center images horizontally */
+    margin-top: 20px;
+}
+
+.timeline-image {
+    width: 80%; /* Increase the size of the images */
+    margin: 10px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.timeline-image:hover {
+    transform: scale(1.1);
+}
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <a href="index.html" style="position: absolute; top: 20px; right: 20px; text-decoration: none; color: white; font-size: 20px; border-bottom: 2px solid transparent;">Home</a>
+        <div class="header-content">
+            <img class="college-logo" src="image/jslogo.png" alt="College Logo">
+            <h1 style="font-size: 50px;">JSS Science and Technology University</h1>
+        </div>
+    </header>
+
+<!-- ABOUT US SECTION -->
+<div class="main-section">
+    <div class="container about-us" style="font-size: 1.2em; font-family: Arial, sans-serif;">
+        <h3 style="text-align: center; margin-bottom: 20px; font-size: 60px;">SJCE-STEP</h3>
+        <div class="about-content">
+            <div class="text-container">
+                <h4 class="subhead" style="font-size: 30px;">SJCE-STEP</h4>
+                <p><strong>SJCE-STEP</strong>, or <strong>SJCE - Science & Technology Entrepreneurs Park</strong>, is a well-established business incubation center located in Mysuru, India. Founded in 1985 with support from the Indian government's Department of Science & Technology, SJCE-STEP has a long history of supporting entrepreneurship and innovation. Over the past three decades, the center has offered training, mentoring, coaching, and consulting to help students, corporates, entrepreneurs, and startups grow and succeed in their careers. SJCE-STEP has earned a reputation as a top-performing business incubation center, having received the BEST STEP award from the Indian government in 2000. With a focus on fostering entrepreneurship, SJCE-STEP plays a crucial role in the development of impactful startups and the growth of the nation's prosperity.</p>
+            </div>
+            <img src="image/step.jpg" class="about-image" alt="About Us Image">
+        </div>
+    </div>
+</div>
+
+<!-- Management Committee Section -->
+<section class="course" id="course_call">
+    <h1 style="font-size: 70px;">Management Committee</h1>
+
+    <div class="row">
+        <div class="course-col">
+            <img src="/image/step1.png" alt="promoter1">
+            <h2>HH Sri Sri Shivarathri Deshikendra Mahaswamiji</h2>
+            <p>President</p>
+        </div>
+
+        <div class="course-col">
+            <img src="/image/step2.png" alt="promoter2">
+            <h2>Dr. C.G Betsurmath</h2>
+            <p>Executive Secretary,JSS MVP</p>
+            <h2>Vice-President</h2>
+        </div>
+
+        <div class="course-col">
+            <img src="/image/step3.png" alt="promoter3">
+            <h2>Dr. B. Suresh</h2>
+            <p>Director Technical Education Division, JSS MVP</p>
+            <h2>Member</h2>
+        </div>
+
+        <div class="course-col">
+            <img src="/image/step4.png" alt="promoter4">
+            <h2>Prof. M.H.Dhanajaya</h2>
+            <p>Advisor Technical Education Division, JSS MVP</p>
+            <h2>Member</h2>
+        </div>
+    </div>
+</section>
+
+<!-- Timeline Section -->
+<section class="timeline">
+    <h1 class="timeline-heading">Timeline</h1>
+    <div class="timeline-images">
+        <img src="image/stepj1.png" class="timeline-image" alt="Timeline Image 1">
+        <img src="image/stepj2.png" class="timeline-image" alt="Timeline Image 2">
+    </div>
+</section>
+
+</body>
+</html>

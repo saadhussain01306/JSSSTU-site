@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="image/icono1.png" type="image/svg+xml">
+    <title>Clubs@JSSSTU</title>
+    <style>
+        /* Cascading Style Sheets */
+
+        *{
+            margin: 0;
+            padding: 0;
+            /* border: 1px solid yellow; */
+        }
+
+        @font-face {
+            font-family: myFirstFont;
+            src: url(../Poppins/Poppins-Regular.ttf);
+        }
+        @font-face {
+            font-family: bold;
+            src: url(../Poppins/Poppins-Bold.ttf);
+        }
+
+        @font-face {
+            font-family: secound;
+            src: url(../Poppins/Poppins-Bold.ttf);
+        }
+
+        h1{
+            font-family: bold;
+        }
+
+        body{
+            font-family: myFirstFont, Verdana, Geneva, Tahoma, sans-serif;
+            cursor: default;
+        }
+
+        /* Website Scrollerbar */
+        body::-webkit-scrollbar {
+            width: 5px !important;
+            height: 5px !important;
+        }
+        body::-webkit-scrollbar-track {
+            background: #3838387c !important;
+        }
+        body::-webkit-scrollbar-thumb {
+            background-color: #e0120ba4 !important;
+            border: 1px solid #ff020279 !important;
+            border-radius: 1px !important;
+        }
+
+        .header {
+            min-height: 100vh;
+            width: 100%;
+            background-image: linear-gradient(rgba(4,9,30,0.6), rgba(4,9,30,0.6)), url(/image/background1.png);
+            background-position: center;
+            background-size: cover;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: transparent; /* Hide text initially */
+            padding-top: 50px;
+            overflow: hidden; /* Hide overflow to prevent content flickering */
+        }
+
+        .header-content {
+            text-align: center;
+            animation: fadeIn 2s ease-out forwards; /* Apply fade in animation to header content */
+        }
+
+        .college-logo {
+            width: 80%; /* Adjust as needed */
+            height: 80%;
+            opacity: 0; /* Initially hide the logo */
+            animation: slideIn 2s ease-out forwards; /* Apply slide in animation to logo */
+        }
+
+        @keyframes fadeIn {
+            from { color: transparent; }
+            to { color: white; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-100%); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+
+        .academic-images {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .academic-images img {
+            max-width: 100px;
+            margin: 0 10px;
+        }
+
+        /* Course */
+        .course{
+            width: 100%;
+            margin: auto;
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        h1{
+            font-size: 36px;
+            font-weight: 300;
+        }
+
+        p{
+            color: #777;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 22px;
+            padding: 10px;
+        }
+
+        .row{
+            margin-top: 5%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .course-col{
+            flex-basis: calc(33.33% - 20px);
+            background: #fff3f3;
+            border-radius: 10px;
+            margin-bottom: 5%;
+            margin-right: 20px;
+            padding: 20px 12px;
+            box-sizing: border-box;
+            position: relative;
+            animation: splitTransition 1s ease-in-out forwards;
+        }
+
+        .course-col img {
+            width: 50%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        h3{
+            text-align: center;
+            font-weight: 600;
+            margin: 10px 0px;
+        }
+
+        .course-col:hover{
+            box-shadow: 10px 10px 24px 0px rgba(0,0,0,0.4);
+        }
+
+        .course-col:nth-child(3n) {
+            margin-right: 0; /* Remove margin for every third column to prevent overflow */
+        }
+
+        @keyframes splitTransition {
+            0% { transform: translateY(-50%); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <a href="index.html" style="position: absolute; top: 20px; right: 20px; text-decoration: none; color: white; font-size: 20px; border-bottom: 2px solid transparent;">Home</a>
+        <div class="header-content">
+            <img class="college-logo" src="image/jslogo.png" alt="College Logo">
+            <h1 style="font-size: 50px;">JSS Science and Technology University</h1>
+        </div>
+    </header>
+
+<section class="course" id="course_call">
+    <h1 style="font-size: 50px; background-color: rgb(94, 94, 100);">Student Clubs</h1>
+
+    <div class="row">
+        <div class="course-col">
+            <img src="/image/linux.jpg" alt="LINUX CAMPUS CLUB (LCC-JSSSTU)">
+            <h2>LINUX CAMPUS CLUB (LCC-JSSSTU)</h2>
+            <h4>Faculty mentor: Dr. Prasanna B T, Associate Prof. Dept of CSE</h4>
+            <p>The only Technical Club of Computer Science and Engineering Department, founded in 2004, which focuses on conducting various Technical Events throughout the year including Coding Contests, Technical Bootcamps and Sessions, providing students hands-on experience on the various Cutting Edge Technologies, all designed to upskill the Technical skills of the students. The club is also responsible for conducting annual technical events FOSSCAMP and FOSSBYTES and also annual fun event FUNIX.</p>
+        </div>
+
+
+        <div class="course-col">
+            <img src="/image/ieee.png" alt="IEEE-SJCE">
+            <h2>IEEE-SJCE</h2>
+            <h4>Faculty mentor:Dr Veena M G ,Prof. Dept of ECE</h4>
+            <p>IEEE-SJCE is the student branch of the well-known International organization the Institute of Electrical and Electronics Engineers (IEEE) which engages in a range of activities to foster technical knowledge, leadership skills, and professional development among students. The club is responsible to organize technical workshops, seminars, and competitions, host conferences for research dissemination, conduct community outreach programs and publish technical journals.</p>
+        </div>
+
+        <div class="course-col">
+            <img src="/image/gdsc.jpeg" alt="GOOGLE DEVELOPER STUDENT CLUBS - JSSSTU">
+            <h2>GOOGLE DEVELOPER STUDENT CLUBS - JSSSTU</h2>
+            <h4>Faculty mentor:Dr. Anil Kumar K M ,Prof. Dept of CSE</h4>
+            <p>We are a college-based community-oriented technical club, under the Dept of Computer Science and Engineering, for students interested in technology, especially Google-related technologies. We conduct various technical and non-technical workshops and events for the student community throughout the year.</p>
+        </div>
+
+        <div class="course-col">
+            <img src="/image/csi.jpeg" alt="COMPUTER SOCIETY OF INDIA (CSI-JSSSTU)">
+            <h2>COMPUTER SOCIETY OF INDIA (CSI-JSSSTU)</h2>
+            <h4>Faculty mentor:Dr.S P Shiva Prakash.,Prof. Dept of ISE</h4>
+            <p>CSI JSSSTU, your gateway to the world of technology and innovation. As a prominent technical club at our college, we offer an exciting array of year-round events and activities that cater to tech enthusiasts. Our journey begins with "Enigma," our annual introductory fun event. Enigma sets the tone for the academic year by providing a platform for students to connect, engage in team-building, and ignite their passion for technology. The highlight of our calendar is "Technologix," our flagship annual technical event. Technologix showcases the zenith of technological prowess through a diverse range of competitions, hackathons, tech talks, and workshops. It's where innovation meets implementation.</p>
+        </div>
+    
+
+        <div class="course-col">
+            <img src="/image/aero.png" alt="AeroJC">
+            <h2>Team AeroJC</h2>
+            <h4>Faculty mentor: Arun YC & Abhinandan MS Dept of Mech</h4>
+            <p>AeroJC is the collegiate aeromodelling club of SJCE, JSSSTU. Team AeroJC participates in international competitions such as SAE AeroDesign and consistently brings laurels to the college. AeroJC also conducts multiple workshops and competitions throughout the year for students.</p>
+        </div>
+    
+        <div class="course-col">
+            <img src="/image/stellar.jpeg" alt="STELLAR JC">
+            <h2>STELLAR JC</h2>
+            <h4>Faculty mentor: A Thyagarajamurthy & Dr. Sudarshan Patil Kulkarni Department of ECE.</h4>
+            <p>We represent a distinguished club from the Department of ECE. Dive into the infinite cosmos with Stellar JC! We're your gateway to the mysteries of space and astronomy. Experience enchanting stargazing nights, satellite development projects, thought-provoking workshops, and astrophotography adventures. Connect with a passionate community, dwell into the latest space discoveries, and reach for the stars together. Your cosmic journey begins here!</p>
+        </div>
+
+        <div class="course-col">
+            <img src="/image/IIC.jpeg" alt="IIC JSSSTU">
+            <h2>IIC-JSSSTU</h2>
+            <h4>Faculty mentor: Dr. S Nanjunda Swamy Department of BT.</h4>
+            <p>Institution's Innovation Council (IIC-JSSSTU) is responsible to inculcate innovation and entrepreneurship spirit in college campus by conducting various activities like Ideathon, Hackathon, Pitch Deck, Debates, Treasure Hunt and many more. The Council consists of members from various departments and embarks every academic year by its own annual fun fest "Convivial".</p>
+        </div>
+
+        <div class="course-col">
+            <img src="/image/venture.jpeg" alt="VENTUREX JSSSTU">
+            <h2>VENTURE-X JSSSTU</h2>
+            <h4>Faculty mentor: Shivashankar B SJCE, STEP.</h4>
+            <p>VentureX is a student based entrepreneurship cell that focuses on promoting entrepreneurial skills and financial literacy in young minds.We facilitate skill growth and enable forward thinking to keep up with this fast paced world, thus creating you into the best possible version you can be.</p>
+        </div>
+
+
+        <div class="course-col">
+            <img src="/image/edboard.png" alt="THE EDITORIAL BOARD">
+            <h2>THE EDITORIAL BOARD</h2>
+            <h4>Faculty mentor: Dr. Vanishree Arun Department of ISE.</h4>
+            <p>The Editorial Board is the official literary club of JSSSTU, responsible for organizing and conducting literary and art events throughout the year. The club currently comprises 28 members from various branches, along with two faculty coordinators, and is divided into three sections — English, Kannada, and Art. The club aims to promote and nurture a love for literature and art among students.</p>
+        </div>
+
+        <div class="course-col">
+            <img src="/image/hard.jpg" alt="HARDWARE CLUB SJCE">
+            <h2>HARDWARE CLUB SJCE</h2>
+            <h4>Faculty mentor: A Thyagarajamurthy & Dr. Sudarshan Patil Kulkarni Department of ECE</h4>
+            <p>Exploring the world of electronics and engineering. We are dedicated towards providing hands-on experience and fostering technology in new minds, and building a community filled with like-minded, passionate individuals. We encourage Inclusivity, Excellence and Collaboration among the members and also proving the power of working together toward the common goal of developing the technology for generations to come. Engaging in active participation in various collegiate events, with a focus on acquiring and disseminating knowledge.</p>
+        </div>
+
+        <div class="course-col">
+            <img src="/image/bur.jpeg" alt="BUREAU CLUB">
+            <h2>BUREAU CLUB</h2>
+            <h4>Faculty mentor: Dr Sidram M H Department of EEE.</h4>
+            <p>Bureau Club at SJCE is the first Civil Services aspirants club in a technical institute in Karnataka. It provides a common platform for aspiring candidates to prepare for the tough Civil Services exam. The club aims to motivate and assist students in preparing for UPSC examination while also focusing on their overall development and building confidence.</p>
+        </div>
+
+        <div class="course-col">
+            <img src="/image/Sahas.png" alt="SAHAS ADVENTURE CLUBD">
+            <h2>SAHAS ADVENTURE CLUBD</h2>
+            
+            <p>Sahas is the only adventure club of JSS STU Mysore, which enables students of our college to participate in adventure sports and embrace the challenges of outdoor activities. The club conducts wide range of programs, including Adventure Junkyard, one of the most awaited events during Jayciana, two-day treks, one-day treks, rock climbing, rappelling, rafting, basic mountaineering course, marathon, cyclothon and five-day aqua and terrestrial camps. Sahas aims to motivate students to step out of their comfort zones, develop resilience and appreciation for nature. The club strives to build strong individuals and educate students about the importance and beauty of the natural world.</p>
+        </div>
+
+        <!-- Add more courses here -->
+
+    </div>
+</section>
+
+</body>
+</html>

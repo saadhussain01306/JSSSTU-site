@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="image/icono1.png" type="image/svg+xml">
+    <title>Course Offerings</title>
+    <style>
+        /* Cascading Style Sheets */
+
+        *{
+            margin: 0;
+            padding: 0;
+            /* border: 1px solid yellow; */
+        }
+
+        @font-face {
+            font-family: myFirstFont;
+            src: url(../Poppins/Poppins-Regular.ttf);
+        }
+        @font-face {
+            font-family: bold;
+            src: url(../Poppins/Poppins-Bold.ttf);
+        }
+
+        @font-face {
+            font-family: secound;
+            src: url(../Poppins/Poppins-Bold.ttf);
+        }
+
+        h1{
+            font-family: bold;
+        }
+
+        body{
+            font-family: myFirstFont, Verdana, Geneva, Tahoma, sans-serif;
+            cursor: default;
+        }
+
+        /* Website Scrollerbar */
+        body::-webkit-scrollbar {
+            width: 5px !important;
+            height: 5px !important;
+        }
+        body::-webkit-scrollbar-track {
+            background: #3838387c !important;
+        }
+        body::-webkit-scrollbar-thumb {
+            background-color: #e0120ba4 !important;
+            border: 1px solid #ff020279 !important;
+            border-radius: 1px !important;
+        }
+
+        .header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.6), rgba(4,9,30,0.6)), url(/image/background1.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: transparent; /* Hide text initially */
+    padding-top: 50px;
+    overflow: hidden; /* Hide overflow to prevent content flickering */
+}
+
+.header-content {
+    text-align: center;
+    animation: fadeIn 2s ease-out forwards; /* Apply fade in animation to header content */
+}
+
+.college-logo {
+    width: 80%; /* Adjust as needed */
+    height: 80%;
+    opacity: 0; /* Initially hide the logo */
+    animation: slideIn 2s ease-out forwards; /* Apply slide in animation to logo */
+}
+
+@keyframes fadeIn {
+    from { color: transparent; }
+    to { color: white; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-100%); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+
+        .academic-images {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .academic-images img {
+            max-width: 100px;
+            margin: 0 10px;
+        }
+
+        /* Course */
+        .course{
+            width: 100%;
+            margin: auto;
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        h1{
+            font-size: 36px;
+            font-weight: 300;
+        }
+
+        p{
+            color: #777;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 22px;
+            padding: 10px;
+        }
+
+        .row{
+            margin-top: 5%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .course-col{
+            flex-basis: calc(33.33% - 20px);
+            background: #fff3f3;
+            border-radius: 10px;
+            margin-bottom: 5%;
+            margin-right: 20px;
+            padding: 20px 12px;
+            box-sizing: border-box;
+            transition: 0.5s;
+            position: relative;
+            animation: splitTransition 1s ease-in-out forwards;
+        }
+
+        .course-col img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        h3{
+            text-align: center;
+            font-weight: 600;
+            margin: 10px 0px;
+        }
+
+        .course-col:hover{
+            box-shadow: 10px 10px 24px 0px rgba(0,0,0,0.4);
+        }
+
+        .course-col:nth-child(3n) {
+            margin-right: 0; /* Remove margin for every third column to prevent overflow */
+        }
+        @keyframes splitTransition {
+            0% { transform: translateY(-50%); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <a href="index.html" style="position: absolute; top: 20px; right: 20px; text-decoration: none; color: white; font-size: 20px; border-bottom: 2px solid transparent;">Home</a>
+        <div class="header-content">
+            <img class="college-logo" src="image/jslogo.png" alt="College Logo">
+            <h1 style="font-size: 50px;">JSS Science and Technology University</h1>
+        </div>
+    </header>
+
+<section class="course" id="course_call">
+    <h1 style="font-size: 70px;">Courses We Offer</h1>
+    <p style="font-size: 40px;">We offer these Programmes</p>
+
+    <div class="row">
+        <div class="course-col">
+            <img src="/image/biotech.jpg" alt="Biotechnology Image">
+            <h2>Biotechnology</h2>
+            <p>The Department of Biotechnology at SJCE provides a full education within the integrated fields of Biotechnology. Our courses span from introductory classes on bachelor level to advanced courses on master level and doctoral programs. An important part of the education is the Master Project which is part of the official research with one of our research groups.</p>
+        </div>
+
+        <div class="course-col">
+            <img src="/image/civil.jpeg" alt="Civil Engineering Image">
+            <h2>Civil Engineering</h2>
+            <p>The Department of Civil Engineering was established during 1963. It possesses state of the art facilities to cater to the needs of undergraduate students, post graduate students and research scholars. The department has distinguished faculty with specialization in almost all major areas of civil engineering. It is active in offering continuing education programmes to the professionals from industry and academia.</p>
+        </div>
+
+        <div class="course-col">
+            <img src="/image/construct.jpeg" alt="Construction Technology and Management Image">
+            <h2>Construction Technology and Management</h2>
+            <p>The Department of Construction Technology and Management was established in the year 2004. It possesses state of the art facilities to cater to the needs of undergraduate students, post graduate students and research scholars. The department has been empowering the students with innovation research and entrepreneurial thoughts. </p>
+        </div>
+
+        <div class="course-col">
+            <img src="/image/environ.jpeg" alt="Environmental Engineering">
+            <h2>Environmental Engineering</h2>
+            <p>Started as an offshoot of Civil Engineering, a humble beginning was made in 1987 as Centre for Environmental Science and Technology (CEST) to promote and start a new programme in Environmental Engineering catering to the needs of the developing society. B.E. (Civil and Environmental Engineering) and M.Tech., (Environmental Engineering) with the financial support from CPHEEO, Ministry of Urban Development, Govt. of India, New Delhi were started under the umbrella of CEST. </p>
+        </div>
+
+        <div class="course-col">
+            <img src="/image/indus.jpeg" alt="Industrial and Production Engineering">
+            <h2>Industrial and Production Engineering</h2>
+            <p>Industrial and Production Engineering Department came into existence in the year 1980 under the umbrella of JSS Mahavidyapeetha. It became a grant-in-aid department in the year 1983. Ever since its inception, the department has grown from strength to strength over the years in terms of intake of students. The program was started in 1980. The department has an intake of over 60 students. The department has a highly qualified, dedicated faculty team.</p>
+        </div>
+
+        <div class="course-col">
+            <img src="/image/mech.jpeg" alt="Mechanical Engineering">
+            <h2>Mechanical Engineering</h2>
+            <p>The Department of Mechanical Engineering was established in the year 1963. The department offers one Under graduate and one post graduate programs. B.E. in Mechanical Engineering has an intake of 120 students, M.Tech in Maintenance Engineering with an intake of 12 students. The Department offers research programmes leading to M.Sc.(Engg) and Ph.D. The Department has qualified and experienced faculty, 8 with doctoral degrees. </p>
+        </div>
+
+        <div class="course-col">
+            <img src="/image/ploy.jpeg" alt="Polymer Science and Technology">
+            <h2>Polymer Science and Technology</h2>
+            <p>The Department of Polymer Science and Technology (PST) was established during 1987-88. It is the only department in the state of Karnataka offering engineering degree in PST (UG, PG, PhD). Department practices outcome based education in the domain of Polymeric materials to impart the science required for engineering skills to develop useful technology in terms of its chemistry, synthesis, blending, compounding, compositing, processing, testing, characterization, recycling.</p>
+        </div>
+
+        <div class="course-col">
+            <img src="/image/com.jpeg" alt="Computer Science and Engineering">
+            <h2>Computer Science and Engineering</h2>
+            <p>The inception of the Department of Computer Science and Engineering (CS&E) was one among the first to be established in the State of Karnataka in the year 1982. Our mission is to create ideas that deepen and advance our understanding of the realm of Computer Science and Engineering and with those ideas to develop innovative, principled, and insightful leaders who changed the world. Classes are conducted on a full-time and on a part-time basis in an intimate-scale environment.</p>
+        </div>
+
+        <div class="course-col">
+            <img src="/image/ele.jpeg" alt="Electrical and Electronics Engineering">
+            <h2>Electrical and Electronics Engineering</h2>
+            <p>The inception of the Department of Computer Science and Engineering (CS&E) was one among the first to be established in the State of Karnataka in the year 1982. Our mission is to create ideas that deepen and advance our understanding of the realm of Computer Science and Engineering and with those ideas to develop innovative, principled, and insightful leaders who changed the world. Classes are conducted on a full-time and on a part-time basis in an intimate-scale environment.</p>
+        </div>
+
+        <div class="course-col">
+            <img src="/image/elec.jpeg" alt="Electronics and Communication Engineering">
+            <h2>Electronics and Communication Engineering</h2>
+            <p>The department of Electronics and Communication Engineering was established in 1968 .The department offers an undergraduate program in Electronics and Communication Engineering, three PG programs namely M.Tech in Industrial Electronics, M.Tech in Network and Internet Engineering and M.Tech in Automotive Electronics. In addition to these, it also offers Ph.D. program which provide a platform for bright graduates and postgraduates to conduct research in state-of-the-art technologies. The department is composed of well-qualified teaching and technical staff with good retention.</p>
+        </div>
+       
+        <div class="course-col">
+            <img src="/image/instru.png" alt="Electronics and instrumentation Engineering">
+            <h2>Electronics and instrumentation Engineering</h2>
+            <p>The Department of Instrumentation Technology was established in the year 1978 and renamed as Electronics and Instrumentation in the year 2014. Department offers UG programme, B.E. in Electronics and Instrumentation Engineering and PG programme, M.Tech. in Biomedical Signal Processing and Instrumentation. The department has state of the art facilities to cater to the needs of undergraduate, post graduate and research programs. The Department has well experienced and dedicated faculty, seven with doctorates and four pursuing Ph.D. </p>
+        </div>
+
+        <div class="course-col">
+            <img src="/image/inform.jpeg" alt="Information Science and Engineering">
+            <h2>Information Science and Engineering</h2>
+            <p>The Department of Information Science & Engineering was established in the year 2000. The department offers two undergraduate program B.E in Information Science and Engineering started in the year 2000, B.E in Computer Science & Business Systems (CSBS) started in the year 2019 and two postgraduate programs M.Tech in Software Engineering started in the year 1995 and M.Tech in Data Science started in the year 2017. The students of the department have a good placement record of more than 90%</p>
+        </div>
+
+        <div class="course-col">
+            <img src="/image/compbus.jpeg" alt="Computer Science and Business Systems">
+            <h2>Computer Science and Business Systems</h2>
+            <p>The Department of Computer Science and Business Systems was established in the year 2000. The department offers two undergraduate program B.E in Information Science and Engineering started in the year 2000, B.E in Computer Science & Business Systems (CSBS) started in the year 2019 and two postgraduate programs M.Tech in Software Engineering started in the year 1995 and M.Tech in Data Science started in the year 2017. The students of the department have a good placement record of more than 90%</p>
+        </div>
+
+        <div class="course-col">
+            <img src="/image/mba.jpeg" alt="MBA">
+            <h2>Master of Business Administration</h2>
+            <p>Established in 1998, the JSS Centre for Management Studies (JSSCMS) in Mysore stands as an integral part of the JSSMVP institution, strategically located at the heart of the vibrant city Mysuru. It resides within the sprawling 120-acre Technical Institutions Campus, which is also home to the esteemed Sri Jayachamarajendra College of Engineering. Recognizing the need to accommodate its growing student body, JSS CMS transitioned to a new, purpose-built facility in 2007, situated on a generous 5000 square meter expanse within the existing campus. Distinguished as a prominent hub for MBA education in the country, JSSCMS offers a comprehensive Two Year Full-Time MBA program, duly approved by the AICTE. </p>
+        </div>
+
+        <div class="course-col">
+            <img src="/image/mca.jpeg" alt="MCA">
+            <h2>Master of Computer Applications</h2>
+            <p>Department has been established to design and offer courses MCA, MSc(Computer Science)and BCA with an objective of producing the best computer professionals to keep swiftness with the R&D activities in this fast emerging field of Computer Applications. Ever since its inception in 1986, the department strives to meet the computing needs of different sectors and offering specially designed courses to their students. The department consistently updates curriculum as per the changing requirements of the industry by considering suggestions from qualified board of studies committee involving efficient members from the field of industry, research and academia. </p>
+        </div>
+
+        <div class="course-col">
+            <img src="/image/chem.jpeg" alt="Chemistry">
+            <h2>Chemistry</h2>
+            <p>Department of Chemistry was established as a part of SJCE in 1963 and it has got excellent qualified faculties offering Engineering Chemistry for Bachelor of Engineering for all branches and Masters of Science (M.Sc.,) and Doctoral mesProgram (Ph.D.,) in the area of Chemistry. M.Sc., Chemistry program has four core modules namely Analytical Chemistry, Organic Chemistry, Inorganic Chemistry and Physical Chemistry. The department apart from its main task of involving itself in academic teaching and research, has strong interaction with industry and has established a mutually beneficial relationship with the nearby institutions. The state of the art infrastructural facilities, faculties and expertise has been the hallmark of the department.</p>
+        </div>
+
+        <div class="course-col">
+            <img src="/image/math.jpeg" alt="Mathematics">
+            <h2>Mathematics</h2>
+            <p>The Department of Mathematics started along with the institute (1963). The department initially catered to the needs of the UG and PG Engineering Mathematics and subsequently, in 2019-20, introduced the PG programme, namely, the M.Sc. (Mathematics). Department of Mathematics caters to the needs of the Engineering Departments and Department of Computer applications of the institution but also offers its own master's program.</p>
+        </div>
+
+        <div class="course-col">
+            <img src="/image/physics.jpeg" alt="Physics">
+            <h2>Physics</h2>
+            <p>Established in tandem with the Sri Jayachamarajendra College of Engineering in 1963, our department actively engages in teaching, research, and the facilitation of workshops, conferences, seminars, and distinguished lectures. Recognized as a research center by VTU, Belagavi, and JSS S& TU, Mysuru, our commitment to advancing knowledge is unwavering. The Department imparts education in Basic Science both in theory and through experiments. </p>
+        </div>
+
+
+        <!-- Add more courses here -->
+
+    </div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="image/icono1.png" type="image/svg+xml">
+    <title>Placement@JSSSTU</title>
+    <style>
+        /* Cascading Style Sheets */
+
+        *{
+            margin: 0;
+            padding: 0;
+            /* border: 1px solid yellow; */
+        }
+
+        @font-face {
+            font-family: myFirstFont;
+            src: url(../Poppins/Poppins-Regular.ttf);
+        }
+        @font-face {
+            font-family: bold;
+            src: url(../Poppins/Poppins-Bold.ttf);
+        }
+
+        @font-face {
+            font-family: secound;
+            src: url(../Poppins/Poppins-Bold.ttf);
+        }
+
+        h1{
+            font-family: bold;
+        }
+
+        body{
+            font-family: myFirstFont, Verdana, Geneva, Tahoma, sans-serif;
+            cursor: default;
+        }
+
+        /* Website Scrollerbar */
+        body::-webkit-scrollbar {
+            width: 5px !important;
+            height: 5px !important;
+        }
+        body::-webkit-scrollbar-track {
+            background: #3838387c !important;
+        }
+        body::-webkit-scrollbar-thumb {
+            background-color: #e0120ba4 !important;
+            border: 1px solid #ff020279 !important;
+            border-radius: 1px !important;
+        }
+
+        .header {
+            min-height: 100vh;
+            width: 100%;
+            background-image: linear-gradient(rgba(4,9,30,0.6), rgba(4,9,30,0.6)), url(/image/background1.png);
+            background-position: center;
+            background-size: cover;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: transparent; /* Hide text initially */
+            padding-top: 50px;
+            overflow: hidden; /* Hide overflow to prevent content flickering */
+        }
+
+        .header-content {
+            text-align: center;
+            animation: fadeIn 2s ease-out forwards; /* Apply fade in animation to header content */
+        }
+
+        .college-logo {
+            width: 80%; /* Adjust as needed */
+            height: 80%;
+            opacity: 0; /* Initially hide the logo */
+            animation: slideIn 2s ease-out forwards; /* Apply slide in animation to logo */
+        }
+
+        @keyframes fadeIn {
+            from { color: transparent; }
+            to { color: white; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-100%); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        /* Placement Section */
+
+        .placement-content {
+    max-width: 800px;
+    margin: 0 auto 30px;
+    text-align: justify;
+    padding: 0 20px;
+    font-size: 18px;
+}
+        .placement-section {
+            background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(/image/placement-bg.jpg);
+            background-position: center;
+            background-size: cover;
+            padding: 50px 0;
+            color: #fff;
+            text-align: center;
+        }
+        
+        .placement-heading {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        .company-images {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .top-recruiters {
+            margin-top: 30px;
+            overflow: hidden;
+        }
+
+        /* Placement Section */
+.placement-content {
+    max-width: 800px;
+    margin: 0 auto 30px;
+    text-align: justify;
+    padding: 0 20px;
+    font-size: 18px;
+    opacity: 0;
+    animation: slideInContent 2s ease-out forwards;
+}
+
+.company-images {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    opacity: 0;
+    animation: slideInImages 2s ease-out forwards;
+}
+
+@keyframes slideInContent {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideInImages {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+        /* Marquee for Top Recruiters */
+        .marquee {
+            animation: marquee-scroll 20s linear infinite;
+            white-space: nowrap;
+        }
+
+        @keyframes marquee-scroll {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <a href="index.html" style="position: absolute; top: 20px; right: 20px; text-decoration: none; color: white; font-size: 20px; border-bottom: 2px solid transparent;">Home</a>
+        <div class="header-content">
+            <img class="college-logo" src="image/jslogo.png" alt="College Logo">
+            <h1 style="font-size: 50px;">JSS Science and Technology University</h1>
+        </div>
+    </header>
+
+<section class="placement-section">
+    <h1 class="placement-heading" style="font-size: 50px;">Placements</h1>
+    <div class="placement-content">
+        <p>Placement office encourages students to gain a great deal of knowledge during their first year when being trained in various languages. Functional English & German language training is offered to students during their 1st year of engineering.</p>
+        <p>Our students are eager to extend their knowledge and gain greater insight into operational processes by fulfilling a practical placement, possibly at companies. In order to offer a Practical Placement, placement officer and the companies involve themselves in a lot of industry institute activities which are as follows:</p>
+        <ul>
+            <li>Regular Students development programs are offered by domain-specific core companies, in means of Technical workshops, seminars, and quiz programs.</li>
+            <li>Regular Industry visits will be organized.</li>
+            <li>Special scholarships will be given out to students who are achievers.</li>
+            <li>Encouraging students to participate in Hackathons and Coding contests.</li>
+            <li>Coordinate with companies in organizing workshops on the latest trends in the industries specific to core sectors.</li>
+            <li>Involving companies in syllabus formation and delivery of new courses to students.</li>
+            <li>During the final year of their B.E / M.Tech & MCA program, students work in and for companies as interns. In this way, they gain valuable practical experience while bringing their own added value of knowledge and expertise to the companies they are working for. Our students have a wealth of experience and knowledge; they are eager to learn and are able and willing to contribute to the company’s business.</li>
+        </ul>
+    </div>
+
+    <h1 style="font-size: 50px;">The Company Stack</h1>
+    <div class="company-images">
+        <!-- Add company images here -->
+        <img src="image/rec.jpg" alt="Company 1">
+    </div>
+    <div class="top-recruiters">
+        <h3 style="font-size: 50px;">Top Recruiters:</h3>
+        <div class="marquee">
+            <!-- Add top recruiter images here -->
+            <img src="image/placement.jpg" alt="Recruiter 1">
+            
+            <!-- Add more recruiter images -->
+        </div>
+    </div>
+</section>
+
+</body>
+</html>

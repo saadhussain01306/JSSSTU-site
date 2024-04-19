@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="image/icono1.png" type="image/svg+xml">
+    <title>About</title>
+    <style>
+         /* Cascading Style Sheets */
+
+         *{
+            margin: 0;
+            padding: 0;
+            /* border: 1px solid yellow; */
+        }
+
+        @font-face {
+            font-family: myFirstFont;
+            src: url(../Poppins/Poppins-Regular.ttf);
+        }
+        @font-face {
+            font-family: bold;
+            src: url(../Poppins/Poppins-Bold.ttf);
+        }
+
+        @font-face {
+            font-family: secound;
+            src: url(../Poppins/Poppins-Bold.ttf);
+        }
+
+        h1{
+            font-family: bold;
+        }
+
+        body{
+            font-family: myFirstFont, Verdana, Geneva, Tahoma, sans-serif;
+            cursor: default;
+        }
+
+        /* Website Scrollerbar */
+        body::-webkit-scrollbar {
+            width: 5px !important;
+            height: 5px !important;
+        }
+        body::-webkit-scrollbar-track {
+            background: #3838387c !important;
+        }
+        body::-webkit-scrollbar-thumb {
+            background-color: #e0120ba4 !important;
+            border: 1px solid #ff020279 !important;
+            border-radius: 1px !important;
+        }
+
+        .header {
+            min-height: 100vh;
+            width: 100%;
+            background-image: linear-gradient(rgba(4,9,30,0.6), rgba(4,9,30,0.6)), url(/image/background1.png);
+            background-position: center;
+            background-size: cover;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: transparent; /* Hide text initially */
+            padding-top: 50px;
+            overflow: hidden; /* Hide overflow to prevent content flickering */
+        }
+
+        .header-content {
+            text-align: center;
+            animation: fadeIn 2s ease-out forwards; /* Apply fade in animation to header content */
+        }
+
+        .college-logo {
+            width: 80%; /* Adjust as needed */
+            height: 80%;
+            opacity: 0; /* Initially hide the logo */
+            animation: slideIn 2s ease-out forwards; /* Apply slide in animation to logo */
+        }
+
+        @keyframes fadeIn {
+            from { color: transparent; }
+            to { color: white; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-100%); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        /*about section*/
+        .about-content {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .heading {
+            font-size: 28px;
+            font-weight: 500;
+            margin-bottom: 30px;
+            color: #0055a4;
+        }
+
+        .subhead {
+            font-size: 28px;
+            color: red;
+            font-weight: 500;
+        }
+
+        .about-content > div {
+            width: 50%;
+            padding: 0 20px;
+        }
+
+        .about-content h4 {
+            font-size: 18px;
+            color: red;
+            font-weight: 500;
+        }
+
+        .about-content p {
+            font-size: 16px;
+            margin-bottom: 20px;
+            line-height: 23px;
+        }
+
+        .about-image {
+            width: 45%;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .about-content:hover .about-image {
+            transform: scale(1.1);
+        }
+
+       /* Course */
+       .course{
+            width: 100%;
+            margin: auto;
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        h1{
+            font-size: 36px;
+            font-weight: 300;
+        }
+
+        p{
+            color: #777;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 22px;
+            padding: 10px;
+        }
+
+        .row{
+            margin-top: 5%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .course-col{
+            flex-basis: calc(25% - 20px);
+            background: #fff3f3;
+            border-radius: 10px;
+            margin-bottom: 5%;
+            margin-right: 20px;
+            padding: 20px 12px;
+            box-sizing: border-box;
+            transition: 0.5s;
+            position: relative;
+            animation: splitTransition 1s ease-in-out forwards;
+        }
+
+        .course-col img {
+            width: 50%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        h3{
+            text-align: center;
+            font-weight: 600;
+            margin: 10px 0px;
+        }
+
+        .course-col:hover{
+            box-shadow: 10px 10px 24px 0px rgba(0,0,0,0.4);
+        }
+
+        .course-col:nth-child(4n) {
+    margin-right: 0; /* Remove margin for every fourth column */
+
+    @keyframes splitTransition {
+            0% { transform: translateY(-50%); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+}
+
+
+        /* Timeline */
+        .journey-section {
+    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), linear-gradient(to bottom, #0055a4, #003366);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 50px;
+}
+
+.timeline-event {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.event-year {
+    font-size: 35px;
+    font-weight: bold;
+    color: #0055a4;
+    margin-bottom: 10px;
+}
+
+.event-description {
+    font-size: 25px;
+    color: #666;
+}
+
+.event-description p {
+    margin-bottom: 10px;
+}
+
+.event-description ul {
+    text-align: left;
+    padding-left: 20px;
+}
+
+.event-description ul li {
+    margin-bottom: 5px;
+}
+
+
+        /* Vision and Mission */
+        .container.vision-mission {
+            background: linear-gradient(rgba(4,9,30,0.6), rgba(4,9,30,0.6));
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 50px;
+        }
+
+        .vision-mission .card {
+            background-color: transparent;
+            box-shadow: none;
+            margin-bottom: 0;
+        }
+
+        .vision-mission .card-title {
+            color: white;
+        }
+
+        .vision-mission .card-content {
+            font-size: 20px;
+            color: white;
+            margin-top: 10px;
+            list-style-type: square;
+            padding-left: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <a href="index.html" style="position: absolute; top: 20px; right: 20px; text-decoration: none; color: white; font-size: 20px; border-bottom: 2px solid transparent;">Home</a>
+        <div class="header-content">
+            <img class="college-logo" src="image/jslogo.png" alt="College Logo">
+            <h1 style="font-size: 50px;">JSS Science and Technology University</h1>
+        </div>
+    </header>
+
+<!-- ABOUT US SECTION -->
+<div class="main-section">
+    <div class="container about-us" style="font-size: 1.2em; font-family: Arial, sans-serif;">
+        <h3 style="text-align: center; margin-bottom: 20px; font-size: 60px;">About Us</h3>
+        <div class="about-content">
+            <div class="text-container">
+                <h4 class="subhead" style="font-size: 30px;">Our Institute</h4>
+                <p><strong>JSS SCIENCE AND TECHNOLOGY UNIVERSITY</strong> JSS STU is the second University established by JSS Mahavidyapeetha, besides the JSS Academy of Higher Education and Research a health sciences focused deemed university at Mysuru.</p>
+
+                <p><strong>JSS STU</strong> plays a key role in providing high-quality skilled manpower in the fields of Science, Engineering & Technology and Management to transform the society through research and innovation.</p>
+
+                <p><strong>JSS STU</strong> is committed to deliver quality education at all levels and provide opportunities for aspiring youth to meet the global needs of society in every sector.</p>
+
+                <p><strong>SRI JAYACHAMARAJENDRA COLLEGE OF ENGINEERING</strong> Established in 1963 as SJCE has 12 departments in engineering, a Master of Computer Applications department. It was affiliated to the VTU, Belgaum, but now it's a Constituent College of JSS Science and Technology University from 2016 - 2017 academic year. SJCE is accredited by the AICTE.</p>
+            </div>
+            <img src="image/about-us.png" class="about-image" alt="About Us Image">
+        </div>
+    </div>
+</div>
+
+<!-- promoters -->
+<section class="course" id="course_call">
+    <h1 style="font-size: 70px;">PROMOTERS</h1>
+
+    <div class="row">
+        <div class="course-col">
+            <img src="/image/promoter1.png" alt="promoter1">
+            <h2>His Holiness Jagadguru Sri Shivarathreeshwara Shivayogi Mahaswamijigalum</h2>
+            <p>Founder of Suttur Math</p>
+        </div>
+
+        <div class="course-col">
+            <img src="/image/promoter2.png" alt="promoter2">
+            <h2>His Holiness Jagadguru Sri Mantramaharshi Pattada Sri Shivarathreeshwara Mahaswamijigalu</h2>
+            <p>Wrote the Panchakshari mantra for over three crore times, which earned him the name “Mantramaharshi”</p>
+        </div>
+
+        <div class="course-col">
+            <img src="/image/promoter3.png" alt="promoter3">
+            <h2>His Holiness Jagadguru Dr. Sri Shivarathri Rajendra Mahaswamijigalu</h2>
+            <p>Established JSS Mahavidyapeetha to make education accessible to all sections of society</p>
+        </div>
+
+        <div class="course-col">
+            <img src="/image/promoter4.png" alt="promoter4">
+            <h2>His Holiness Jagadguru Sri Sri Shivarathri Deshikendra Mahaswamijigalu</h2>
+            <p>Present Pontiff and President of JSS Mahavidyapeetha</p>
+        </div>
+    </div>
+</section>
+
+<!-- timeline -->
+<div class="container journey-section">
+    <h2 style="text-align: center; margin-top: 50px; font-size: 40px;">The Journey</h2>
+    <div class="timeline">
+        <div class="timeline-event">
+            <div class="event-year">1963</div>
+            <div class="event-description">
+                <p>ESTABLISHED AS A PRIVATE ENGG. COLLEGE (SJCE).</p>
+                <ul>
+                    <li>UG: 3 Programmes (Intake: 90)</li>
+                </ul>
+            </div>
+        </div>
+        <div class="timeline-event">
+            <div class="event-year">1972</div>
+            <div class="event-description">
+                <p>IDENTIFIED AS A GRANT-IN-AID COLLEGE.</p>
+            </div>
+        </div>
+        <div class="timeline-event">
+            <div class="event-year">2007</div>
+            <div class="event-description">
+                <p>AUTONOMOUS COLLEGE</p>
+                <ul>
+                    <li>UG: 12 + 4 Programmes (Intake: 790)</li>
+                    <li>PG: 12 Programmes (Intake: 326)</li>
+                </ul>
+            </div>
+        </div>
+        <div class="timeline-event">
+            <div class="event-year">2016</div>
+            <div class="event-description">
+                <p>JSS SCIENCE AND TECHNOLOGY UNIVERSITY</p>
+                <ul>
+                    <li>UG: 12 + 4 Programmes (Intake: 910)</li>
+                    <li>PG: 18 Programmes (Intake: 405)</li>
+                </ul>
+            </div>
+        </div>
+        <div class="timeline-event">
+            <div class="event-year">2018</div>
+            <div class="event-description">
+                <p>JSS SCIENCE AND TECHNOLOGY UNIVERSITY</p>
+                <ul>
+                    <li>UG: 14 + 4 Programmes (Intake: 1110)</li>
+                    <li>PG: 25 Programmes (Intake: 687)</li>
+                    <li>Ph.D - 110 students</li>
+                </ul>
+            </div>
+        </div>
+        <div class="timeline-event">
+            <div class="event-year">2022</div>
+            <div class="event-description">
+                <p>JSS SCIENCE AND TECHNOLOGY UNIVERSITY</p>
+                <ul>
+                    <li>UG: 14 + 3 Programmes (Intake: 1240)</li>
+                    <li>PG: 31 Programmes (Intake: 550)</li>
+                    <li>Ph.D: 201 Students</li>
+                </ul>
+            </div>
+        </div>
+        <div class="timeline-event">
+            <div class="event-year">2023</div>
+            <div class="event-description">
+                <p>JSS SCIENCE AND TECHNOLOGY UNIVERSITY</p>
+                <ul>
+                    <li>UG: 14 + 3 Programmes (Intake: 1240)</li>
+                    <li>PG: 31 + 06 (new) Programmes (Intake: 980)</li>
+                    <li>Ph.D: 201 Students</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Vision and Mission -->
+<div class="container vision-mission">
+    <div class="card">
+        <h2 class="card-title">VISION</h2>
+        <ul class="card-content">
+            <li>Advancing JSS Science and Technology University as a leader in education, research and technology on the international arena.</li>
+            <li>To provide the students a universal platform to launch their careers, vesting the industry and research community with skilled and professional workforce.</li>
+            <li>Accomplishing JSS Science and technology University as an epicentre for innovation, centre of excellence for research with state of the art lab facilities.</li>
+            <li>Fostering an erudite, professional forum for researchers and industrialist to coexist and to work cohesively for the growth and development of science and technology for betterment of society. <br></li>
+        </ul>
+    </div>
+    <div class="card">
+        <h2 class="card-title">MISSION</h2>
+        <ul class="card-content">
+            <li>Education, research and social outreach are the core doctrines of JSS Science and technology University that are responsible for accomplishment of in-depth knowledge base, professional skill and innovative technologies required to improve the socio economic conditions of the country.</li>
+            <li>Our mission is to develop JSS Science and technology University as a global destination for cohesive learning of engineering, science and management which are strongly supported with interdisciplinary research and academia.</li>
+            <li>JSS Science and technology Universityis committed to provide world class amenities, infrastructural and technical support to the students, staff, researchers and industrial partners to promote and protect innovations and technologies through patents and to enrich entrepreneurial endeavors.</li>
+            <li>JSS Science and technology University core mission is to create knowledge led economy through appropriate technologies, and to resolve societal problems by educational empowerment and ethics for better living.</li>
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>

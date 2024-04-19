@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="image/icono1.png" type="image/svg+xml">
+    <title>Admissions@JSSSTU</title>
+    <style>
+        /* Cascading Style Sheets */
+
+        *{
+            margin: 0;
+            padding: 0;
+            /* border: 1px solid yellow; */
+        }
+
+        @font-face {
+            font-family: myFirstFont;
+            src: url(../Poppins/Poppins-Regular.ttf);
+        }
+        @font-face {
+            font-family: bold;
+            src: url(../Poppins/Poppins-Bold.ttf);
+        }
+
+        @font-face {
+            font-family: secound;
+            src: url(../Poppins/Poppins-Bold.ttf);
+        }
+
+        h1{
+            font-family: bold;
+        }
+
+        body{
+            font-family: myFirstFont, Verdana, Geneva, Tahoma, sans-serif;
+            cursor: default;
+        }
+
+        /* Website Scrollerbar */
+        body::-webkit-scrollbar {
+            width: 5px !important;
+            height: 5px !important;
+        }
+        body::-webkit-scrollbar-track {
+            background: #3838387c !important;
+        }
+        body::-webkit-scrollbar-thumb {
+            background-color: #e0120ba4 !important;
+            border: 1px solid #ff020279 !important;
+            border-radius: 1px !important;
+        }
+
+        .header {
+            min-height: 100vh;
+            width: 100%;
+            background-image: linear-gradient(rgba(4,9,30,0.6), rgba(4,9,30,0.6)), url(/image/background1.png);
+            background-position: center;
+            background-size: cover;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: transparent; /* Hide text initially */
+            padding-top: 50px;
+            overflow: hidden; /* Hide overflow to prevent content flickering */
+        }
+
+        .header-content {
+            text-align: center;
+            animation: fadeIn 2s ease-out forwards; /* Apply fade in animation to header content */
+        }
+
+        .college-logo {
+            width: 80%; /* Adjust as needed */
+            height: 80%;
+            opacity: 0; /* Initially hide the logo */
+            animation: slideIn 2s ease-out forwards; /* Apply slide in animation to logo */
+        }
+
+        @keyframes fadeIn {
+            from { color: transparent; }
+            to { color: white; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-100%); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            opacity: 0; /* Initially hide the tables */
+            animation: slideTable 2s ease-out forwards; /* Apply slide in animation to tables */
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #faf7f7;
+        }
+
+        @keyframes slideTable {
+            from { transform: translateY(-100%); }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <a href="index.html" style="position: absolute; top: 20px; right: 20px; text-decoration: none; color: white; font-size: 20px; border-bottom: 2px solid transparent;">Home</a>
+        <div class="header-content">
+            <img class="college-logo" src="image/jslogo.png" alt="College Logo">
+            <h1 style="font-size: 50px;">JSS Science and Technology University</h1>
+        </div>
+    </header>
+    
+
+
+<h2 style="text-align: center;">The details of the programmes (with intake) undertaken for SJCE and JSS STU are shown as follows:</h2>
+
+<h3 style="text-align: center;">JSS Science and Technology University. (JSS STU)</h3>
+<h4 style="text-align: center;">Undergraduate Courses(unaided) CET code – E057 | COMED-K Code: E061</h4>
+<table>
+    <tr>
+        <th>#</th>
+        <th>Programs</th>
+        <th>Intake</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>B.E. Biotechnology</td>
+        <td>60</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>B.E. Civil Engineering</td>
+        <td>60</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>B.E. Construction Technology and Management</td>
+        <td>30</td>
+    </tr>
+
+    <tr>
+        <td>4</td>
+        <td>B.E. Computer Science and Engineeringt</td>
+        <td>180</td>
+    </tr>
+
+    <tr>
+        <td>5</td>
+        <td>B.E. Electronics and Communication Engineering</td>
+        <td>60</td>
+    </tr>
+
+    <tr>
+        <td>6</td>
+        <td>B.E. Information Science and Engineering</td>
+        <td>90</td>
+    </tr>
+
+    <tr>
+        <td>7</td>
+        <td>B.E. Mechanical Engineering</td>
+        <td>60</td>
+    </tr>
+
+    <tr>
+        <td>8</td>
+        <td>B.E. Computer Science and Business System</td>
+        <td>60</td>
+    </tr>
+
+    <tr>
+        <td>9</td>
+        <td>Bachelor of Computer Applications</td>
+        <td>180</td>
+    </tr>
+
+    <!-- Add more rows for JSS STU undergraduate courses -->
+</table>
+
+<h4 style="text-align: center;">Postgraduate Courses</h4>
+<table>
+    <tr>
+        <th>#</th>
+        <th>Programs</th>
+        <th>Intake</th>
+    </tr>
+     
+    <tr>
+        <td>1</td>
+        <td>M.Tech. Biotechnology</td>
+        <td>12</td>
+    </tr>
+
+    <tr>
+        <td>2</td>
+        <td>M.Tech. Data Science</td>
+        <td>20</td>
+    </tr>
+
+    <tr>
+        <td>3</td>
+        <td>M.Tech. Health Science and Water Engineering</td>
+        <td>12</td>
+    </tr>
+
+    <tr>
+        <td>4</td>
+        <td>M.Tech. Industrial Electronics</td>
+        <td>18</td>
+    </tr>
+
+    <tr>
+        <td>5</td>
+        <td>M.Tech. Infrastructure Engineering and Management</td>
+        <td>20</td>
+    </tr>
+
+    <tr>
+        <td>6</td>
+        <td>M.Tech. Material Science and Engineering</td>
+        <td>12</td>
+    </tr>
+
+    <tr>
+        <td>7</td>
+        <td>M.Tech. Network and Internet Engineering</td>
+        <td>18</td>
+    </tr>
+
+    <tr>
+        <td>8</td>
+        <td>M.Tech. Software Engineering</td>
+        <td>18</td>
+    </tr>
+
+    <tr>
+        <td>9</td>
+        <td>M.Sc. in Film Making</td>
+        <td>30</td>
+    </tr>
+
+    <tr>
+        <td>10</td>
+        <td>Master of Computer Application</td>
+        <td>120</td>
+    </tr>
+
+    <tr>
+        <td>11</td>
+        <td>Master of Business Administration</td>
+        <td>60</td>
+    </tr>
+
+    <tr>
+        <td>12</td>
+        <td>MBA – Financial Management</td>
+        <td>40</td>
+    </tr>
+
+    <tr>
+        <td>13</td>
+        <td>MBA – Retail Management</td>
+        <td>60</td>
+    </tr>
+
+    <tr>
+        <td>14</td>
+        <td>MBA – Digital Marketing</td>
+        <td>60</td>
+    </tr>
+
+
+    <tr>
+        <td>15</td>
+        <td>MBA – Financial Marketing</td>
+        <td>30</td>
+    </tr>
+
+    <tr>
+        <td>16</td>
+        <td>M.Sc. in Chemistry</td>
+        <td>30</td>
+    </tr>
+
+    <tr>
+        <td>17</td>
+        <td>M.Sc. in Analytical Chemistry</td>
+        <td>30</td>
+    </tr>
+
+    <tr>
+        <td>18</td>
+        <td>M.Sc. in Biotechnology</td>
+        <td>30</td>
+    </tr>
+
+    <tr>
+        <td>19</td>
+        <td>M.Sc. in Mathematics</td>
+        <td>30</td>
+    </tr>
+
+    <tr>
+        <td>20</td>
+        <td>M.Sc. in Physics</td>
+        <td>30</td>
+    </tr>
+
+    <tr>
+        <td>21</td>
+        <td>M.Sc. in Computer Science (Cyber Security)</td>
+        <td>30</td>
+    </tr>
+
+    <tr>
+        <td>22</td>
+        <td>M.Sc. in Al and ML(Computer Science)</td>
+        <td>30</td>
+    </tr>
+
+    <tr>
+        <td>23</td>
+        <td>M.Sc. in Automated Manufacturing</td>
+        <td>30</td>
+    </tr>
+
+    <tr>
+        <td>24</td>
+        <td>M.Sc. in Polymer Science</td>
+        <td>30</td>
+    </tr>
+
+    
+
+
+    <!-- Add rows for JSS STU postgraduate courses -->
+</table>
+
+<h3 style="text-align: center;">Sri Jayachamarajendra College of Engineering. (SJCE)</h3>
+<h4 style="text-align: center;">(Constituent College of JSS Science and Technology University)</h4>
+
+<h4 style="text-align: center;">Undergraduate Courses(aided) CET code – E021 | COMED-K Code: E061</h4>
+<table>
+    <tr>
+        <th>#</th>
+        <th>Programs</th>
+        <th>Intake</th>
+    </tr>
+
+    <tr>
+        <td>1</td>
+        <td>B.E. Civil Engineering</td>
+        <td>60</td>
+    </tr>
+
+    <tr>
+        <td>2</td>
+        <td>B.E. Computer Science and Engineering</td>
+        <td>60</td>
+    </tr>
+
+    <tr>
+        <td>3</td>
+        <td>B.E. Electrical and Electronics Engineering</td>
+        <td>60</td>
+    </tr>
+
+    <tr>
+        <td>4</td>
+        <td>B.E. Electronics and Communication</td>
+        <td>60</td>
+    </tr>
+
+    <tr>
+        <td>5</td>
+        <td>B.E. Electronics and Instrumentation Engineering</td>
+        <td>60</td>
+    </tr>
+
+    <tr>
+        <td>6</td>
+        <td>B.E. Environmental Engineering</td>
+        <td>60</td>
+    </tr>
+
+    <tr>
+        <td>7</td>
+        <td>B.E. Industrial and Production Engineering</td>
+        <td>60</td>
+    </tr>
+
+    <tr>
+        <td>8</td>
+        <td>B.E. Mechanical Engineering</td>
+        <td>60</td>
+    </tr>
+
+    <tr>
+        <td>9</td>
+        <td>B.E. Polymer Science and Technology</td>
+        <td>40</td>
+    </tr>
+
+
+    <!-- Add rows for SJCE aided undergraduate courses -->
+</table>
+
+<h4 style="text-align: center;">Undergraduate Courses(unaided) CET code – E284 | COMED-K Code: E058</h4>
+<table>
+    <tr>
+        <th>#</th>
+        <th>Programs</th>
+        <th>Intake</th>
+    </tr>
+
+    <tr>
+        <td>1</td>
+        <td>B.E. Computer Science and Engineering</td>
+        <td>60</td>
+    </tr>
+    <!-- Add rows for SJCE unaided undergraduate courses -->
+</table>
+
+<h4 style="text-align: center;">Postgraduate Courses – MCA CET Code C522</h4>
+<table>
+    <tr>
+        <th>#</th>
+        <th>Programs</th>
+        <th>Intake</th>
+    </tr>
+
+    <tr>
+        <td>1</td>
+        <td>M.Tech. Automotive Electronics</td>
+        <td>24</td>
+    </tr>
+
+    <tr>
+        <td>2</td>
+        <td>M.Tech. Biomedical Signal Processing and Instrumentation</td>
+        <td>12</td>
+    </tr>
+
+    <tr>
+        <td>3</td>
+        <td>M.Tech. Computer Engineering</td>
+        <td>12</td>
+    </tr>
+
+    <tr>
+        <td>4</td>
+        <td>M.Tech. Energy System and Management</td>
+        <td>12</td>
+    </tr>
+
+    <tr>
+        <td>5</td>
+        <td>M.Tech. Environmental Engineering</td>
+        <td>18</td>
+    </tr>
+
+    <tr>
+        <td>6</td>
+        <td>M.Tech. Industrial Structures</td>
+        <td>18</td>
+    </tr>
+
+    <tr>
+        <td>7</td>
+        <td>M.Tech. Maintenance Engineering</td>
+        <td>12</td>
+    </tr>
+
+    <tr>
+        <td>8</td>
+        <td>M.Tech. Polymer Science and Technology</td>
+        <td>12</td>
+    </tr>
+
+    <tr>
+        <td>9</td>
+        <td>Master of Computer Application</td>
+        <td>60</td>
+    </tr>
+    <!-- Add rows for SJCE postgraduate courses -->
+</table>
+
+</body>
+</html>
